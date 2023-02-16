@@ -41,7 +41,7 @@ users_list_group: []
 # users home directory
 users_home: /home
 # default user's primary group for users
-users_group:
+users_group: users
 # default user's secondary groups
 users_groups: []
 # default user's home directory permissions

@@ -2,6 +2,7 @@
 - name: Converge
   hosts: all
   vars:
+    users_no_log: false
     users:
       - username: testuser
         # password=testuser
