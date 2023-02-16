@@ -9,7 +9,7 @@ lint: |
   flake8 .
 platforms:
   - name: instance
-    image: 'geerlingguy/docker-${MOLECULE_DISTRO:-centos7}-ansible:latest'
+    image: '${MOLECULE_DISTRO:-krakerdev/opensuse-ansible}'
     command: ${MOLECULE_DOCKER_COMMAND:-""}
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro

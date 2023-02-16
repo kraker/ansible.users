@@ -52,3 +52,5 @@ users_ssh_key_type: rsa
 users_ssh_key_bits: 2048
 # default user's setting for authorized keys exclusive
 users_authorized_keys_exclusive: 'no'
+# Default for no_log. Boolean (true/false).
+users_no_log: true

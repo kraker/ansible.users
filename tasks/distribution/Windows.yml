@@ -23,7 +23,7 @@
     update_password: "{{ item.update_password | default('on_create') }}"
     password_expired: "{{ item.password_expired | default('false') }}"
     user_cannot_change_password: "{{ item.user_cannot_change_password | default(false) }}"
-  no_log: "{{ true if item.password is defined else false }}"
+  no_log: "{{ users_no_log }}"
   with_items: "{{ users }}"
 
 - name: "Windows : hide user accounts from the login screen"
@@ -32,7 +32,7 @@
     name: "{{ item.username }}"
     type: dword
   with_items: "{{ users }}"
-  no_log: "{{ true if item.password is defined else false }}"
+  no_log: "{{ users_no_log }}"
   when: item.hide
   vars:
     path: "HKLM:\\SOFTWARE\\Microsoft\\Windows NT"

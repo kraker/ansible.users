@@ -1,5 +1,11 @@
 ---
 - name: Converge
   hosts: all
+  vars:
+    users:
+      - username: testuser
+        # password=testuser
+        password: '$6$MYHk4mVtArh19dSH$TG5s/rBDt6sGd8LcQzhE.UaXPLKLsa0U4lq7GTuhmjiGneawQIhes0U9I1o4w.Xs0tt7t.pghRI.3k2HnrUH/.'
+        ssh_key_generate: true
   roles:
     - role: arillso.users
